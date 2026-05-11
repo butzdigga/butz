@@ -3,12 +3,31 @@
  */
 package org.example;
 
+
+import org.apache.commons.numbers.primes.Primes;
+import java.util.Arrays;
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+     int[] zahlen = {42, 7, 15, 97, 23, 88, 3};
+     Arrays.sort(zahlen);
+        System.out.println("Sortierte Zahlen: " + Arrays.toString(zahlen));
+
+        System.out.println("----------------------------------------------");
+        for (int z : zahlen) {
+            // Check: Ist es eine Primzahl?
+            boolean istPrim = Primes.isPrime(z);
+            
+            // Finde die nächstgrößere Primzahl
+            // Wir nehmen z+1, damit er bei einer Primzahl wirklich die NÄCHSTE sucht
+            int naechste = Primes.nextPrime(z + 1);
+
+            System.out.println("Zahl: " + z + 
+                               " | Primzahl? " + (istPrim ? "JA " : "NEIN") + 
+                               " | Naechste Primzahl: " + naechste);
+        }   
     }
 }
