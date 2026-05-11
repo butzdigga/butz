@@ -17,6 +17,11 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
+    
+    // Hier stehen schon andere Sachen wie 'guava' oder 'junit'
+    
+    implementation group: 'org.apache.commons', name: 'commons-numbers-primes', version: '1.2'
+
     testImplementation libs.junit.jupiter
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
