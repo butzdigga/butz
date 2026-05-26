@@ -20,18 +20,20 @@ class AppTest {
     void siebenundneunzigIstPrimzahl() {
         assertTrue(App.istPrimzahl(97));
     }
-        @Test
-    void siebennaechsteprimzahl() {
-        assertTrue(App.naechstePrimzahl(7)==7);
-    }
-        @Test
-    void fuenfzehnnaechsteprimzahl() {
-        assertTrue(App.naechstePrimzahl(15)==17);
-    }
-        @Test
-    void siebenundneunzignaechsteprimzahl() {
-        assertTrue(App.naechstePrimzahl(97)==101);
-    }
+ @Test
+void siebenNaechstePrimzahl() {
+    assertEquals(7, App.naechstePrimzahl(7));
+}
+
+@Test
+void fuenfzehnNaechstePrimzahl() {
+    assertEquals(17, App.naechstePrimzahl(15));
+}
+
+@Test
+void siebenundneunzigNaechstePrimzahl() {
+    assertEquals(101, App.naechstePrimzahl(97));
+}
 
 
 
