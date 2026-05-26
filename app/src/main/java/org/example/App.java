@@ -14,6 +14,9 @@ public static boolean istPrimzahl(int zahl){
 return Primes.isPrime(zahl);
 
 }
+public static int naechstePrimzahl(int zahl){
+    return Primes.nextPrime(zahl);
+}
     public static void main(String[] args) {
      int[] zahlen = {42, 7, 15, 97, 23, 88, 3};
      Arrays.sort(zahlen);
