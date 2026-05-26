@@ -11,7 +11,12 @@ public class App {
         return "Hello World!";
     }
 public static boolean istPrimzahl(int zahl){
-return Primes.isPrime(zahl);
+     if (zahl < 0){
+        throw new IllegalArgumentException(
+            "Zahl darf nicht negativ sein");
+    }
+
+    return Primes.isPrime(zahl);
 
 }
 public static int naechstePrimzahl(int zahl){
