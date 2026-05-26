@@ -32,7 +32,7 @@ void fuenfzehnNaechstePrimzahl() {
 
 @Test
 void siebenundneunzigNaechstePrimzahl() {
-    assertEquals(101, App.naechstePrimzahl(97));
+    assertEquals(97, App.naechstePrimzahl(97));
 }
 
 @Test
@@ -49,9 +49,13 @@ void nullIstKeinePrimzahl() {
 void negativeZahlIstKeinePrimzahl() {
     assertFalse(App.istPrimzahl(-7));
 }
+
 @Test
-void negativeZahlNaechstePrimzahl() {
-    assertEquals(2, App.naechstePrimzahl(-10));
+void negativeZahlWirftFehler() {
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> App.naechstePrimzahl(-10)
+    );
 }
 
 }
