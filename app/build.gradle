@@ -16,18 +16,12 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
-    
-    // Hier stehen schon andere Sachen wie 'guava' oder 'junit'
-    
-    implementation group: 'org.apache.commons', name: 'commons-numbers-primes', version: '1.2'
-    testImplementation'org.mockito:mockito-core:5.+'
-    testImplementation libs.junit.jupiter
 
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.apache.commons:commons-numbers-primes:1.2'
 
-    // This dependency is used by the application.
-    implementation libs.guava
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+
+    testImplementation 'org.mockito:mockito-core:5.12.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
