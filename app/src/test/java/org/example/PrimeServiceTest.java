@@ -2,7 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 class PrimeServiceTest {
@@ -11,11 +11,10 @@ class PrimeServiceTest {
     void mockTest() {
 
         PrimeService service =
-                spy(new PrimeService());
+                mock(PrimeService.class);
 
-        doReturn(true)
-                .when(service)
-                .pruefe(7);
+        when(service.pruefe(7))
+                .thenReturn(true);
 
         assertTrue(
                 service.pruefe(7)
