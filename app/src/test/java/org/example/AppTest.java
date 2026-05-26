@@ -47,7 +47,10 @@ void nullIstKeinePrimzahl() {
 
 @Test
 void negativeZahlIstKeinePrimzahl() {
-    assertFalse(App.istPrimzahl(-7));
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> App.istPrimzahl(-7)
+    );
 }
 
 @Test

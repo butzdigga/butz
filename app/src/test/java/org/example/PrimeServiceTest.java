@@ -11,13 +11,14 @@ class PrimeServiceTest {
     void mockTest() {
 
         PrimeService service =
-            mock(PrimeService.class);
+                spy(new PrimeService());
 
-        when(service.pruefe(7))
-            .thenReturn(true);
+        doReturn(true)
+                .when(service)
+                .pruefe(7);
 
         assertTrue(
-            service.pruefe(7)
+                service.pruefe(7)
         );
     }
 }
