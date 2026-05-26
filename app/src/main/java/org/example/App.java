@@ -25,11 +25,12 @@ public static int naechstePrimzahl(int zahl){
         System.out.println("----------------------------------------------");
         for (int z : zahlen) {
             // Check: Ist es eine Primzahl?
-            boolean istPrim = Primes.isPrime(z);
+            boolean istPrim = istPrimzahl(z);
             
             // Finde die nächstgrößere Primzahl
             // Wir nehmen z+1, damit er bei einer Primzahl wirklich die NÄCHSTE sucht
-            int naechste = Primes.nextPrime(z + 1);
+            
+            int naechste = naechstePrimzahl(z+1);
 
             System.out.println("Zahl: " + z + 
                                " | Primzahl? " + (istPrim ? "JA " : "NEIN") + 
