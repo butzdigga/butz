@@ -10,7 +10,10 @@ public class App {
     public String getGreeting() {
         return "Hello World!";
     }
+public static boolean istPrimzahl(int zahl){
+return Primes.isPrime(zahl);
 
+}
     public static void main(String[] args) {
      int[] zahlen = {42, 7, 15, 97, 23, 88, 3};
      Arrays.sort(zahlen);
