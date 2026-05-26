@@ -49,6 +49,9 @@ void nullIstKeinePrimzahl() {
 void negativeZahlIstKeinePrimzahl() {
     assertFalse(App.istPrimzahl(-7));
 }
-
+@Test
+void negativeZahlNaechstePrimzahl() {
+    assertEquals(2, App.naechstePrimzahl(-10));
+}
 
 }
