@@ -35,7 +35,20 @@ void siebenundneunzigNaechstePrimzahl() {
     assertEquals(101, App.naechstePrimzahl(97));
 }
 
+@Test
+void einsIstKeinePrimzahl() {
+    assertFalse(App.istPrimzahl(1));
+}
 
+@Test
+void nullIstKeinePrimzahl() {
+    assertFalse(App.istPrimzahl(0));
+}
+
+@Test
+void negativeZahlIstKeinePrimzahl() {
+    assertFalse(App.istPrimzahl(-7));
+}
 
 
 }
