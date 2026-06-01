@@ -74,5 +74,30 @@ void negativeZahlWirftFehler() {
         () -> App.naechstePrimzahl(-10)
     );
 }
+@Test
+void negativeZahlBewertung() {
+    assertEquals(
+        "negativ",
+        App.bewerteZahl(-5)
+    );
+}
+
+@Test
+void nullBewertung() {
+    assertEquals(
+        "null",
+        App.bewerteZahl(0)
+    );
+}
+
+@Test
+void positiveZahlBewertung() {
+    assertEquals(
+        "positiv",
+        App.bewerteZahl(8)
+    );
+}
+
 
 }
+
