@@ -20,6 +20,14 @@ class AppTest {
     void siebenundneunzigIstPrimzahl() {
         assertTrue(App.istPrimzahl(97));
     }
+    @Test
+    void nullIstPrimzahl() {
+        assertTrue(App.istPrimzahl(0));
+    }
+    @Test
+    void einsIstPrimzahl() {
+        assertTrue(App.istPrimzahl(97));
+    }
  @Test
 void siebenNaechstePrimzahl() {
     assertEquals(7, App.naechstePrimzahl(7));
