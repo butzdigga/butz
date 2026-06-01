@@ -22,11 +22,11 @@ class AppTest {
     }
     @Test
     void nullIstPrimzahl() {
-        assertTrue(App.istPrimzahl(0));
+        assertFalse(App.istPrimzahl(0));
     }
     @Test
     void einsIstPrimzahl() {
-        assertTrue(App.istPrimzahl(97));
+        assertFalse(App.istPrimzahl(1));
     }
  @Test
 void siebenNaechstePrimzahl() {
