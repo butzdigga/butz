@@ -19,6 +19,16 @@ public static boolean istPrimzahl(int zahl){
     return Primes.isPrime(zahl);
 
 }
+public static String bewerteZahl(int zahl){
+    if(zahl<0){
+        return "negativ";
+    }
+    if(zahl==0){
+
+        return "null";
+    }
+    return "positiv";
+}
 public static boolean istGerade(int zahl){
 if(zahl % 2==0){
     return true;
