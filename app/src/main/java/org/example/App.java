@@ -19,6 +19,13 @@ public static boolean istPrimzahl(int zahl){
     return Primes.isPrime(zahl);
 
 }
+public static boolean istGerade(int zahl){
+if(zahl % 2==0){
+    return true;
+}
+return false;
+
+}
 public static int naechstePrimzahl(int zahl){
     return Primes.nextPrime(zahl);
 }
