@@ -29,6 +29,10 @@ public static String bewerteZahl(int zahl){
     }
     return "positiv";
 }
+public static boolean istPositiv(int zahl) {
+    return zahl > 0;
+}
+
 public static boolean istGerade(int zahl){
 if(zahl % 2==0){
     return true;
