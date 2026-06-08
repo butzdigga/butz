@@ -1,19 +1,19 @@
 stages:
   - build
   - test
+
 build-gradle:
   stage: build
-
   image: eclipse-temurin:21
 
   script:
     - chmod +x gradlew
-    - ./gradlew build
+    - ./gradlew assemble
+
 test-gradle:
   stage: test
-
   image: eclipse-temurin:21
 
   script:
     - chmod +x gradlew
-    - ./gradlew test    
+    - ./gradlew test
